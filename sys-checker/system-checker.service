@@ -1,0 +1,26 @@
+[Unit]
+Description=System Package Checker and Updater
+Documentation=file:///opt/system-checker/README.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/system-checker/system-checker.sh
+User=root
+Group=root
+WorkingDirectory=/opt/system-checker
+StandardOutput=journal
+StandardError=journal
+
+# Security settings
+NoNewPrivileges=false
+PrivateDevices=false
+ProtectSystem=false
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+
+[Install]
+WantedBy=multi-user.target

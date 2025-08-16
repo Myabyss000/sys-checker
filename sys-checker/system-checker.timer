@@ -1,0 +1,13 @@
+[Unit]
+Description=Run System Checker Daily
+Documentation=file:///opt/system-checker/README.md
+Requires=system-checker.service
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+RandomizedDelaySec=1800
+AccuracySec=1h
+
+[Install]
+WantedBy=timers.target

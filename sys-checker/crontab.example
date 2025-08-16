@@ -1,0 +1,35 @@
+# System Checker Cron Jobs
+# Add these lines to your crontab (crontab -e) for automated scheduling
+
+# Run daily at 2:00 AM (default)
+0 2 * * * /opt/system-checker/system-checker.sh >/dev/null 2>&1
+
+# Alternative schedules:
+
+# Run every 6 hours
+# 0 */6 * * * /opt/system-checker/system-checker.sh >/dev/null 2>&1
+
+# Run weekly on Sunday at 3:00 AM
+# 0 3 * * 0 /opt/system-checker/system-checker.sh >/dev/null 2>&1
+
+# Run monthly on the 1st at 1:00 AM
+# 0 1 1 * * /opt/system-checker/system-checker.sh >/dev/null 2>&1
+
+# Run with auto-update enabled (DANGEROUS - use with caution)
+# 0 2 * * * /opt/system-checker/system-checker.sh --auto-update >/dev/null 2>&1
+
+# Run during business hours for maintenance windows
+# 0 1 * * 1-5 /opt/system-checker/system-checker.sh >/dev/null 2>&1
+
+# Run with email notification (if mail is configured)
+# 0 2 * * * /opt/system-checker/system-checker.sh 2>&1 | mail -s "System Check Report" admin@example.com
+
+# Cron time format:
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of week (0 - 6) (Sunday to Saturday)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * *
