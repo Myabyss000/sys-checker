@@ -1,6 +1,4 @@
 # Linux System Checker & Auto-Updater
-
-[![CI Tests](https://github.com/Myabyss000/sys-checker/workflows/CI%20Tests/badge.svg)](https://github.com/Myabyss000/sys-checker/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Shell](https://img.shields.io/badge/Shell-Bash-green.svg)](https://www.gnu.org/software/bash/)
 [![Platform](https://img.shields.io/badge/Platform-Linux-blue.svg)](https://www.linux.org/)
@@ -395,3 +393,4 @@ For issues, questions, or contributions:
 - Keep the configuration file secure
 - Monitor disk space in log directory
 - Consider backup strategies for critical systems
+
